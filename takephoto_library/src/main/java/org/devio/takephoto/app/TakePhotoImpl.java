@@ -375,7 +375,7 @@ public class TakePhotoImpl implements TakePhoto {
         if (PermissionManager.TPermissionType.WAIT.equals(permissionType)) {
             return;
         }
-        if (Build.VERSION.SDK_INT >= 23) {
+        if (Build.VERSION.SDK_INT >= 24) {
             this.outPutUri = TUriParse.convertFileUriToFileProviderUri(contextWrap.getActivity(), outPutUri);
         } else {
             this.outPutUri = outPutUri;
